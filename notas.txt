@@ -1,0 +1,2 @@
+useState - Casi siempre que se va a traer información de una base de datos se usa.
+useEffect - Temporalmente captura los usuarios y pregunta si lo que está en el estado y en la base de datos es lo mismo, si es lo mismo se va a finalizar la ejecución y la petición

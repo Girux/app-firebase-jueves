@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { connDatabase } from "../../database/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -28,9 +29,18 @@ const Login = () => {
 
   const iniciarSesion = () => {
     if(buscarUsuario()){
-      console.log('jelo')
+      //sweetalert, para instalarlo se usa con el comando "npm i sweetalert2"
+      Swal.fire({
+        title: "Bienvenido...",
+        text: "Será direccionado al Home",
+        icon: "success"
+      });
     }else{
-      console.log('Nimodo Master')
+      Swal.fire({
+        title: "Error",
+        text: "Usuario y/o contraseña incorrecta",
+        icon: "Error"
+      });
     }
   };
 

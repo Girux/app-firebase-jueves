@@ -1,2 +1,19 @@
 useState - Casi siempre que se va a traer información de una base de datos se usa.
 useEffect - Temporalmente captura los usuarios y pregunta si lo que está en el estado y en la base de datos es lo mismo, si es lo mismo se va a finalizar la ejecución y la petición
+
+Clase 23 de Mayo
+    if(buscarUsuario()){
+      //sweetalert, para instalarlo se usa con el comando "npm i sweetalert2"
+      Swal.fire({
+        title: "Bienvenido...",
+        text: "Será direccionado al Home",
+        icon: "success"
+      });
+    }else{
+      Swal.fire({
+        title: "Error",
+        text: "Usuario y/o contraseña incorrecta",
+        icon: "Error"
+      });
+    }
+En la carpeta pages se crea otra carpeta llamada users, dentro de esta carpeta se crea un componente llamado ListadoUsuarios.jsx y su css
